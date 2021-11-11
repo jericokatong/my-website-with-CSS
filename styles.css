@@ -1,0 +1,300 @@
+/*Keterangan : Mobile First Design, dimulai dari <576px */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+}
+
+header h1 {
+    position: relative;
+    display: inline-block;
+    top: 0.5rem; 
+}
+
+header h1:hover {
+    color: rgb(148, 179, 253);
+}
+
+header ul {
+    display: none;
+}
+
+.container {
+    margin: 0 1.5rem;
+    padding-bottom: 1rem;
+    position:relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+#check {
+    display: none;
+}
+
+.side-bar {
+    position: fixed;
+    background-color: rgb(34, 101, 151, 0.9);
+    top: 0;
+    left: -35%;
+    bottom: 0;
+    width: 35%;
+    transition-duration: 0.3s;
+    z-index: 999;
+}
+
+.side-bar li {
+    padding: 1rem;
+    font-size: 1rem;
+
+}
+
+.side-bar li:hover {
+    cursor: pointer;
+    background-color: rgb(148, 179, 253);
+}
+
+.side-bar li a {
+    color: rgb(243, 249, 251);
+}
+
+#check:checked ~ .side-bar {
+    left: 0;
+}
+
+.menu-bar {
+    float: right;
+    margin-top: 1rem;
+}
+
+.profil {
+    background-color: rgb(135, 192, 205);
+    padding: 2rem 0;
+}
+
+.profil img {
+    width: 9rem;
+}
+
+.profil p {
+    display: inline;
+    float: right;
+}
+
+
+.pembuka {
+    padding: 20px;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    left: 10rem;
+}
+
+.pembuka::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.pembuka p::first-letter {
+    font-size: 2.5rem;
+}
+
+
+section h3 {
+    text-align: center;
+    position: relative;
+    margin: 3rem 0;
+
+}
+
+section h3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 155px;
+    height: 1px;
+    background-color: rgb(17, 63, 103);
+    left: calc(47% - 60px);
+}
+
+table, tr, td{
+    padding-bottom: 0.7rem;
+}
+
+#Skills,
+#Spiritual,
+#Video-Cover,
+#Contact {
+    background-color: rgb(243, 249, 251);
+}
+
+#Self-Learning p{
+    text-align: justify;
+}
+
+#Self-Learning p::first-line {
+    color: cadetblue;
+}
+
+#Self-Learning p::selection {
+    background-color: blue;
+    color: white;
+}
+
+#Spiritual p {
+    text-align: justify;
+}
+
+.container-2 .gambar-pelayanan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gambar-pelayanan img {
+    margin-bottom: 1rem;
+    width: 15rem;
+}
+
+.gambar-pelayanan  img:hover {
+    transform: scale(1.2);
+}
+
+#Hobby p {
+    text-align: justify;
+}
+
+#Hobby iframe {
+    margin-top: 1rem;
+    width: 20rem;
+}
+
+.video-youtube {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#Video-Cover video{
+    width: 75%;
+}
+
+#Audio-Fingerstyle li {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: rgb(17, 63, 103);
+    padding: 5rem;
+    text-align: center;
+    color: rgb(243, 249, 251);
+}
+
+footer small::before {
+    content: "*";
+}
+
+footer small::after {
+    content: "*";
+}
+
+
+
+@media (min-width: 576px) {
+    .menu-bar {
+        display: none;
+    }
+
+    header {
+        position: sticky;
+        top: 0.1rem;
+        background-color: #F4F9F9;
+        z-index: 101;
+    }
+
+    header h1 {
+        display: inline-block;
+    }
+
+    header ul{
+        display: inline;
+        float: right;
+        margin-top: 1rem;
+    }
+
+    header ul li {
+        display: inline;
+        margin-left: 2rem;
+    }
+
+    header ul li a:hover {
+        color: rgb(148, 179, 253);
+    }
+
+    header ul li a {
+        color: black;
+    }
+
+    .container::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    section h3::before {
+        left: calc(49% - 60px);
+    }
+
+    #Self-Learning p {
+        background-color: #F4F9F9;
+        border: 1px solid skyblue;
+    }
+
+    #Video-Cover video {
+        width: 40%;
+    }
+
+    .container-2 .gambar-pelayanan{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gambar-pelayanan::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    #Spiritual img {
+        border: 10px solid rgb(148, 179, 253);
+        width: 10rem;
+        height: 10rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+}
+
+@media  (min-width: 576px) and (max-width: 1170px) {
+    .menu-bar {
+        display: inline-block;
+    }
+
+    header {
+        position: static;
+    }
+
+    header ul {
+        display: none;
+    }
+}
